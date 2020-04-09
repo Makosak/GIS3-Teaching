@@ -1,0 +1,53 @@
+---
+title: "Lab 1. Intro to RMarkdown & Github"
+author: "Marynia Kolak"
+output: pdf_document
+---
+
+# Objectives
+In this lab you will:
+
+* test the R installation you've performed
+* review some R basics
+* learn the basics of an RMarkdown file
+* intiate a new Github repository for your work.
+
+
+# R Installation
+You should have already gone through the basics of R installation following tutorials posted in the course module. In addition to [R](), you should also have downloaded [RStudio](). 
+
+Let's test the basics of your R installation by checking the version
+```{r, echo=TRUE}
+version
+```
+
+# Basics of R
+
+## Getting Started
+Next we will review some R basics. 
+
+Let’s get started with some basic R commands and best practices. For any scripts your produce, alwaysannotate and mark your code. To comment in R, just input a # before your notes. Update your name.
+```{r, echo=TRUE}
+# This is a comment made by Marynia.
+```
+
+
+When you have questions, use the help function. A question mark serves as a shortcut.
+```{r, echo=TRUE}
+? mean
+```
+
+
+#### Packages
+Load all packages and dependencies at the start of your code. Depending on the package, some installationstake longer than others. Quotes are required, and there are multiple options. Check the source documentationswhen you have questions.
+```{r, echo=TRUE}
+#  install.packages("lubridate")
+```
+
+
+You only need to install once, but you’ll have to import the package each time you open the session.
+```{r, echo=TRUE}
+library(rgdal)
+library(foreign)
+library(lubridate)
+```
