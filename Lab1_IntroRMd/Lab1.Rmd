@@ -1,0 +1,121 @@
+---
+title: "Lab 1. Intro to RMarkdown & Github"
+author: "GIS 3 - Geocomputation - Spring 2020 - Marynia Kolak"
+output:
+  html_document:
+    theme: cosmo
+    toc: true
+    toc_float: true
+---
+
+# Objectives
+In this lab you will:
+
+* test the R installation you've performed
+* review some R basics
+* learn the basics of an RMarkdown file
+* intiate a new Github repository for your work.
+
+
+# R Installation
+You should have already gone through the basics of R installation following tutorials posted in the course module. In addition to [R](https://www.r-project.org/), you should also have downloaded [RStudio](https://rstudio.com/products/rstudio/download/). 
+
+Let's test the basics of your R installation by checking the version
+```{r}
+version
+```
+
+# Basics of R
+
+### Getting Started
+Next we will review some R basics. 
+
+Let’s get started with some basic R commands and best practices. For any scripts your produce, always annotate and mark your code. To comment in R, just input a # before your notes. Update your name.
+```{r, echo=TRUE}
+# This is a comment made by Marynia.
+```
+
+
+When you have questions, use the help function. A question mark serves as a shortcut.
+```{r, echo=TRUE, eval=FALSE}
+? mean
+```
+
+
+### Packages
+Load all packages and dependencies at the start of your code. Depending on the package, some installations take longer than others. Quotes are required, and there are multiple options. Check the source documentationswhen you have questions.
+```{r, echo=TRUE}
+#  install.packages("lubridate")
+```
+
+You only need to install once, but you’ll have to import the package each time you open the session.
+```{r, echo=TRUE, eval=FALSE}
+library(rgdal)
+library(foreign)
+library(lubridate)
+```
+
+Next, quickly review the **[Intro R](https://github.com/Makosak/GIS3-Teaching/blob/master/Labs/IntroR.pdf)** highights available on our class Github site. This reviews working directory basics, simple operations, data structures, basic summary statistics, basic elementwise operations, and more. 
+
+# Intro to RMarkdown
+The following steps are guided by the [RMarkdown Cheatsheet](https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf) published by RStudio. You will be encouraged to read through this cheatsheet to get familiar with the system.
+
+R Markdown is a format for writing reproducible, dynamic reports with R. We can use it to embed code, generate plots and figures, and make pdfs, html pages, slideshows, and more.
+
+### Opening an RMarkdown file
+Open an Rmd template in RStudio to start, or saving a text file with an .Rmd extension. You can also edit an existing .Rmd file.
+
+### Markdown Syntax
+You will write your report using plain text, using markdown syntax for formatting. See the overview of syntax for you to try on your own directly from the [Cheatsheet](https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)!
+
+### Choose output
+Write a YAML header to identify the type of document you want to build: html_document for a webpage, pdf_document for a pdf document, and so forth. There are many ways to stylize your Rmd files with slight parameter specifications, so be sure to search for various options!
+
+In this YAML document, my header looks like the following:
+
+```{r, echo=TRUE, eval=FALSE}
+---
+title: "Lab 1. Intro to RMarkdown & Github"
+author: "GIS 3 - Geocomputation - Spring 2020 - Marynia Kolak"
+output:
+  html_document:
+    theme: cosmo
+    toc: true
+    toc_float: true
+---
+```
+
+While you're doing this, also update the header with a title, author, date, and other information necessary.
+
+### Embed Code
+Next, embed code within your RMarkdown file using `knitr` syntax. Review the cheat sheet for different options.
+
+For `code-like formatting` you can surround text with back ticks. To enable inline code, use back ticks and r. For code chunks, use three back ticks -- see the cheat sheet for examples. Try for yourself!
+
+A tip for developing useful Rmd files is taking advantage of display options. By using boolean parameter specifications like "echo" and "eval", you can control what code is shown and evaluated/run within the environment.
+
+### Render Code
+There are two ways to render your Rmd file. You can either click the "Knit" button within RStudio, or run `rmarkdown::render("<file path>")` within your console. If you are already within the working directory of your file, you can run `rmarkdown::render("filename.Rmd")`.
+
+# Intro to Github
+To share the reproducible code generated in this course, we will use Github to post and share our work.
+
+First, go to Github.com and create a new, free account.
+
+Next, work through this [10-minute "Hello World tutorial](https://guides.github.com/activities/hello-world/) that guides you through the basics of Github. You will create a new repository, start and manage a new branch, make changes and push them as commits, and finally open and merge a pull request.
+
+# Lab 1 Submission.
+To complete this lab, please prepare and submit the following:
+
+1. Develop a new RMarkdown document entitled "Lab1_YourLastName" that:
+  + Shows the R version you have installed.
+  + Loads libraries of your choice.
+  + Includes 2-3 code examples of R that you've learned as code chunks. This can be from introductory learning materials, and/or from the chapter readings this week.
+  + Is rendered using the output of your choice.
+  + Should be titled, authored, and include meaningful intro/guidance throughout using appropriate markdown syntatx.
+ 
+2. Genereate a new Github repository called "GIS 3" or something similar on your Github site.
+
+3. Upload your final Rmd file and/or output file to the GIS 3 repository.
+
+4. Submit the link to your Github file directly.
